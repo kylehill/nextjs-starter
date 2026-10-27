@@ -1,10 +1,8 @@
-# Next.js Starter
+# Testing vocabulary
 
-A reusable starting point for web projects. This glossary fixes the vocabulary used for the three kinds of automated test, so they are never confused with each other.
+This repo has three kinds of automated test. Use these terms exactly, so they are never confused with each other.
 
-## Language
-
-### Tests
+## Tests
 
 **Unit Test**:
 A test of one function or component in isolation, run in a simulated browser, that checks behaviour rather than appearance.
@@ -18,7 +16,7 @@ _Avoid_: Snapshot test, screenshot test, UI test
 A test that drives a real browser through the fully built application, the way a user would.
 _Avoid_: E2E spec, integration test, acceptance test, browser test
 
-### Visual regression
+## Visual regression
 
 **Story**:
 One named, fixed state of a component, defined for Storybook, that a Visual Regression Test can render on its own.
