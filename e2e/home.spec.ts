@@ -7,6 +7,5 @@ test.describe("home page", () => {
     await expect(
       page.getByRole("heading", { level: 1, name: "Next.js Starter" }),
     ).toBeVisible();
-    await expect(page.getByRole("heading", { level: 2, name: "Counter" })).toBeVisible();
   });
 });

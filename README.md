@@ -44,10 +44,8 @@ Visual regression tests also need [Docker](https://docs.docker.com/get-docker/) 
 ```
 src/
   app/                  Next.js App Router (layout, home page)
-  components/
-    Button/             Button.tsx, .module.css, .stories.tsx
-    Counter/            Counter.tsx, .module.css, .test.tsx, .stories.tsx
-  lib/clamp.ts          clamp util (+ clamp.test.ts)
+  components/           Components (Component.tsx, .module.css, .test.tsx, .stories.tsx)
+  lib/                  Plain TypeScript utilities (+ *.test.ts)
 .storybook/             Storybook config (@storybook/nextjs-vite)
 visual/                 Visual regression test + __screenshots__/ baselines
 e2e/                    End-to-end tests
