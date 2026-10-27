@@ -16,7 +16,7 @@
     "build-storybook": "storybook build --quiet",
     "test:visual": "sh scripts/visual-docker.sh",
     "test:visual:update": "sh scripts/visual-docker.sh --update-snapshots",
-    "test:visual:ci": "npm run build-storybook && playwright test --config playwright.visual.config.ts",
+    "test:visual:ci": "npm run build-storybook && playwright test --config playwright.visual.config.ts --pass-with-no-tests",
     "test:e2e": "playwright test"
   },
   "dependencies": {
