@@ -1,6 +1,10 @@
 # Next.js Starter
 
-A starting point for new web projects: Next.js (App Router), TypeScript and CSS Modules, with three layers of automated tests already wired up. See [`CONTEXT.md`](./CONTEXT.md) for what each kind of test means.
+> **Starting a new Project from this template?** Follow [`docs/new-project.md`](./docs/new-project.md).
+
+A starting point for new web projects: Next.js (App Router), TypeScript and CSS Modules, with three layers of automated tests already wired up. See [`docs/agents/testing.md`](./docs/agents/testing.md) for what each kind of test means.
+
+It's also set up for an agent-driven grilling workflow with [Matt Pocock's skills](https://github.com/mattpocock/skills): see the `## Agent skills` section of [`AGENTS.md`](./AGENTS.md).
 
 | Concern                 | Tooling                                                                     |
 | ----------------------- | --------------------------------------------------------------------------- |
@@ -49,7 +53,10 @@ src/
 .storybook/             Storybook config (@storybook/nextjs-vite)
 visual/                 Visual regression test + __screenshots__/ baselines
 e2e/                    End-to-end tests
+docs/agents/            Config the agent skills read (issue tracker, labels, domain docs, testing vocabulary)
+docs/new-project.md     One-time checklist for a new Project
 scripts/visual-docker.sh
+scripts/setup-labels.sh Creates the GitHub issue labels the agent skills use
 ```
 
 ## Unit tests
@@ -96,4 +103,4 @@ Playwright reports are uploaded as artifacts.
 
 - npm 11's `allowScripts` field in `package.json` approves the install scripts of `esbuild` and `unrs-resolver`. Older npm versions ignore it.
 - ESLint 10 is used because ESLint 9 is end-of-life. Some plugins bundled by `eslint-config-next` haven't widened their peer range yet, so `npm install` prints `ERESOLVE overriding peer dependency` warnings; linting works normally.
-- `AGENTS.md` is generated and maintained by Next.js (`next dev` re-adds it); commit it as is.
+- `next dev` maintains the block between the `nextjs-agent-rules` markers in `AGENTS.md` and re-adds it if removed; commit it as is. Text outside the markers (the `## Agent skills` section) is left alone.
