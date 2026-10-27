@@ -1,0 +1,10 @@
+.next/
+out/
+build/
+coverage/
+storybook-static/
+playwright-report/
+test-results/
+visual/__screenshots__/
+package-lock.json
+next-env.d.ts
