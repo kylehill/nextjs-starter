@@ -31,4 +31,17 @@ test.describe("counter", () => {
     await expect(value).toHaveText("10");
     await expect(increment).toBeDisabled();
   });
+
+  test("stops at the minimum of 0", async ({ page }) => {
+    const value = page.getByRole("status", { name: "Count" });
+    const increment = page.getByRole("button", { name: "Increment" });
+    const decrement = page.getByRole("button", { name: "Decrement" });
+
+    await increment.click();
+    await expect(value).toHaveText("1");
+
+    await decrement.click();
+    await expect(value).toHaveText("0");
+    await expect(decrement).toBeDisabled();
+  });
 });
